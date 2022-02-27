@@ -1,8 +1,18 @@
 # Задание 1
 # Необходимо вывести имена всех учеников из списка с новой строки
 
+from operator import index
+from re import X
+
+
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+def main():
+    for x in names: 
+        print(x)
+    #print(*names, sep='\n')
+if __name__ == "__main__":
+    main()
+
 
 
 # Задание 2
@@ -12,7 +22,12 @@ names = ['Оля', 'Петя', 'Вася', 'Маша']
 # Петя: 4
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+def main():
+    for x in names: 
+        print(f'{x}:{len(x)}')
+    #print(*names, sep='\n')
+if __name__ == "__main__":
+    main()
 
 
 # Задание 3
@@ -25,7 +40,17 @@ is_male = {
     'Маша': False,
 }
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+def main():
+    for x in names:
+        if is_male.get(x) == True:
+            print(x + " - male ")
+        else:
+            print(x + " - female ")
+
+        #print(f'{x}:{False,True }')
+    #print(*names, sep='\n')
+if __name__ == "__main__":
+    main()
 
 
 # Задание 4
@@ -40,7 +65,13 @@ groups = [
     ['Вася', 'Маша', 'Саша', 'Женя'],
     ['Оля', 'Петя', 'Гриша'],
 ]
-# ???
+def main():
+    print(f" Всего { len(groups)} группы")
+for index, group in enumerate(groups): 
+    print(f" Группа {index} : { len(groups)} ученика")
+    #print(*names, sep='\n')
+if __name__ == "__main__":
+    main()
 
 
 # Задание 5
@@ -54,4 +85,9 @@ groups = [
     ['Оля', 'Петя', 'Гриша'],
     ['Вася', 'Маша', 'Саша', 'Женя'],
 ]
-# ???
+def main():
+    for index, group in enumerate(groups): 
+        print(f'Группа {index}:', end=' ')
+        print(','.join(group))
+if __name__ == "__main__":
+    main()
